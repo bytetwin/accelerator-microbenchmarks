@@ -22,7 +22,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
     rm -rf /usr/local/lib/python3.12/site-packages/ray/jars
 
 # Verify that the benchmark script can be run
-RUN python Ironwood/src/run_benchmark.py --help
+RUN python -m accelerator_microbenchmarks.run_benchmark --help
 
 # Set environment variables
 ENV JAX_PLATFORMS=tpu,cpu \

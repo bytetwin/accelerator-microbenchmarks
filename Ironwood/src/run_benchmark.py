@@ -1,7 +1,8 @@
 """This script runs microbenchmarks and collects metrics.
 
 Sample usage (on TPU vm):
-  $ python run_benchmark.py --config=configs/benchmark_collectives.yaml
+  $ python -m accelerator_microbenchmarks.run_benchmark \
+      --config=Ironwood/configs/collectives/all_gather_1d.yaml
 """
 
 import argparse
@@ -12,7 +13,7 @@ import itertools
 import random
 import string
 from typing import Any, Callable, Dict, List, Tuple
-from benchmark_utils import (
+from .benchmark_utils import (
     configure_single_host_tpu,
     maybe_write_metrics_file,
     rename_xla_dump,
@@ -158,7 +159,7 @@ def get_benchmark_functions(
 
     # Get the benchmark function
     try:
-        module = importlib.import_module(f"{module_path}")
+        module = importlib.import_module(f".{module_path}", __package__)
         benchmark_func = getattr(module, func_name)
     except ModuleNotFoundError as e:
         raise ValueError(

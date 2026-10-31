@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=77.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "accelerator-microbenchmarks"
+version = "0.1.0"
+description = "JAX microbenchmarks for TPU compute, memory, and interconnect."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+tpu = [
+    "jax==0.11.1",
+    "jaxlib==0.11.1",
+    "libtpu==0.0.48",
+    "absl-py",
+    "flax==0.12.7",
+    "numpy",
+    "pandas",
+    "pyyaml",
+    "jsonlines",
+    "ray[default]",
+    # For profiling
+    "tensorboard-plugin-profile",
+    # Install tensorflow-cpu to avoid spurring "Can't import tensorflow.python.profiler.trace" error from jax.profiler.
+    "tensorflow-cpu",
+    "qwix @ git+https://github.com/google/qwix.git",
+    "tokamax",
+    "tune-jax==0.7.2",
+    "immutabledict",
+]
+
+[tool.setuptools]
+packages = ["accelerator_microbenchmarks"]
+package-dir = {accelerator_microbenchmarks = "Ironwood/src"}

@@ -3,15 +3,15 @@
 import os
 from typing import Any, Dict
 
-from benchmark_utils import create_mesh
-from benchmark_utils import get_lhs_named_shading
-from benchmark_utils import get_out_sharding
-from benchmark_utils import get_rhs_named_shading
-from benchmark_utils import handle_based_on_sharding
-from benchmark_utils import multiple_iteration_timeit_from_trace_throttling
-from benchmark_utils import ShardingStrategy
-from benchmark_utils import unified_flops_metrics
-from common import MARKER
+from .benchmark_utils import create_mesh
+from .benchmark_utils import get_lhs_named_shading
+from .benchmark_utils import get_out_sharding
+from .benchmark_utils import get_rhs_named_shading
+from .benchmark_utils import handle_based_on_sharding
+from .benchmark_utils import multiple_iteration_timeit_from_trace_throttling
+from .benchmark_utils import ShardingStrategy
+from .benchmark_utils import unified_flops_metrics
+from .common import MARKER
 
 import jax
 from jax.experimental.shard_map import shard_map

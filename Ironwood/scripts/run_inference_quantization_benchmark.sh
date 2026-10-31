@@ -13,7 +13,7 @@ do
   echo "--- Starting benchmark for ${CONFIG} ---"
 
   # Run the python script and wait for it to complete
-  python Ironwood/src/run_benchmark.py --config="${CONFIG_FILE}"
+  python -m accelerator_microbenchmarks.run_benchmark --config="${CONFIG_FILE}"
 
   echo "--- Finished benchmark for ${CONFIG} ---"
 done

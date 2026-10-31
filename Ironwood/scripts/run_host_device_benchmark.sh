@@ -60,7 +60,7 @@ fi
 
 for CONFIG_FILE in "${CONFIGS[@]}"; do
     echo "--- Running Config: $CONFIG_FILE ---"
-    CMD="python Ironwood/src/run_benchmark.py --config=${CONFIG_FILE}"
+    CMD="python -m accelerator_microbenchmarks.run_benchmark --config=${CONFIG_FILE}"
 
     if [ "$INTERLEAVED" = true ]; then
         if command -v numactl &> /dev/null; then

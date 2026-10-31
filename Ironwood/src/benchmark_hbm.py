@@ -3,10 +3,10 @@
 import os
 from typing import Any, Dict, Tuple
 
-from benchmark_utils import get_real_dtype_bytes
-from benchmark_utils import MetricsStatistics
-from benchmark_utils import multiple_iteration_timeit_from_trace
-from common import MARKER
+from .benchmark_utils import get_real_dtype_bytes
+from .benchmark_utils import MetricsStatistics
+from .benchmark_utils import multiple_iteration_timeit_from_trace
+from .common import MARKER
 
 import jax
 import jax.numpy as jnp

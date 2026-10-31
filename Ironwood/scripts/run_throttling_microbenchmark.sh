@@ -11,7 +11,7 @@ do
   
   echo "--- Starting throttling benchmark for ${CONFIG} ---"
   
-  python Ironwood/src/run_benchmark.py --config="${CONFIG_FILE}"
+  python -m accelerator_microbenchmarks.run_benchmark --config="${CONFIG_FILE}"
   
   echo "--- Finished throttling benchmark for ${CONFIG} ---"
 done

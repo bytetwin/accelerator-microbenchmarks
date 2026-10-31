@@ -6,15 +6,15 @@ Considered ops:
 import os
 from typing import Any, Dict
 
-from benchmark_utils import create_mesh
-from benchmark_utils import get_out_sharding
-from benchmark_utils import get_output_named_shading
-from benchmark_utils import get_rowwise_named_shading
-from benchmark_utils import handle_based_on_sharding
-from benchmark_utils import iteration_timeit
-from benchmark_utils import ShardingStrategy
-from benchmark_utils import unified_bytes_metrics
-from common import MARKER
+from .benchmark_utils import create_mesh
+from .benchmark_utils import get_out_sharding
+from .benchmark_utils import get_output_named_shading
+from .benchmark_utils import get_rowwise_named_shading
+from .benchmark_utils import handle_based_on_sharding
+from .benchmark_utils import iteration_timeit
+from .benchmark_utils import ShardingStrategy
+from .benchmark_utils import unified_bytes_metrics
+from .common import MARKER
 
 from flax import nnx
 import jax

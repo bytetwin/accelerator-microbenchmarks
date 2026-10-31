@@ -7,9 +7,9 @@ IRONWOOD_DIR="$(dirname $(dirname "$DIR"))"
 cd "$IRONWOOD_DIR"
 
 echo "Running comprehensive benchmarks across 1, 2, and 8 devices..."
-python3 src/run_benchmark.py --config configs/host_device/comprehensive_experiments.yaml
+python3 -m accelerator_microbenchmarks.run_benchmark --config configs/host_device/comprehensive_experiments.yaml
 
 echo "Running 8-device benchmark with numactl interleaving..."
-numactl --interleave=all python3 src/run_benchmark.py --config configs/host_device/comprehensive_8dev_experiments.yaml
+numactl --interleave=all python3 -m accelerator_microbenchmarks.run_benchmark --config configs/host_device/comprehensive_8dev_experiments.yaml
 
 echo "Benchmarks completed successfully."

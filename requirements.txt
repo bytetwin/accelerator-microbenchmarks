@@ -1,17 +1,1 @@
-jax==0.11.1
-absl-py
-flax==0.12.7
-jaxlib==0.11.1
-libtpu==0.0.48
-numpy
-pandas
-jsonlines
-ray[default]
-# For profiling
-tensorboard-plugin-profile
-# Install tensorflow-cpu to avoid spurring "Can't import tensorflow.python.profiler.trace" error from jax.profiler.
-tensorflow-cpu
-qwix@git+https://github.com/google/qwix.git
-tokamax
-tune-jax==0.7.2
-immutabledict
+-e .[tpu]

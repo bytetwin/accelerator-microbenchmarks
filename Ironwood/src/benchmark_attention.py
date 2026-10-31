@@ -6,8 +6,8 @@ import logging
 import os
 from typing import Any, Callable, Dict, Tuple
 
-from benchmark_utils import MetricsStatistics
-from benchmark_utils import timeit_from_trace
+from .benchmark_utils import MetricsStatistics
+from .benchmark_utils import timeit_from_trace
 import jax
 from tokamax._src.ops.experimental.tpu.splash_attention import splash_attention_kernel as splash
 from tokamax._src.ops.experimental.tpu.splash_attention import splash_attention_mask as mask_lib

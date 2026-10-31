@@ -5,14 +5,14 @@ import math
 import os
 from typing import Any, Dict
 
-from benchmark_utils import find_sparsecore_usage_from_xplane
-from benchmark_utils import get_lhs_named_shading
-from benchmark_utils import get_out_sharding
-from benchmark_utils import MetricsStatistics
-from benchmark_utils import multiple_iteration_timeit_from_trace
-from benchmark_utils import ShardingStrategy
-from benchmark_utils import get_real_dtype_bytes
-from common import MARKER
+from .benchmark_utils import find_sparsecore_usage_from_xplane
+from .benchmark_utils import get_lhs_named_shading
+from .benchmark_utils import get_out_sharding
+from .benchmark_utils import MetricsStatistics
+from .benchmark_utils import multiple_iteration_timeit_from_trace
+from .benchmark_utils import ShardingStrategy
+from .benchmark_utils import get_real_dtype_bytes
+from .common import MARKER
 import jax
 from jax import core
 from jax import ffi

@@ -4,9 +4,9 @@ import os
 import tempfile
 from typing import Any, Dict, Tuple
 
-from benchmark_utils import get_real_dtype_bytes
-from benchmark_utils import get_trace
-from common import MARKER
+from .benchmark_utils import get_real_dtype_bytes
+from .benchmark_utils import get_trace
+from .common import MARKER
 
 import jax
 from jax.experimental import mesh_utils

@@ -19,7 +19,7 @@ import re
 from collections import defaultdict
 import subprocess
 import shutil
-from common import MARKER
+from .common import MARKER
 from enum import Enum, auto
 from jax.sharding import Mesh
 from jax.sharding import NamedSharding

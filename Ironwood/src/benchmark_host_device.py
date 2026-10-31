@@ -8,7 +8,7 @@ import os
 import time
 from typing import Any, Dict, List, Tuple
 
-from benchmark_utils import MetricsStatistics
+from .benchmark_utils import MetricsStatistics
 import jax
 from jax import numpy as jnp
 from jax.sharding import Mesh, NamedSharding, PartitionSpec
