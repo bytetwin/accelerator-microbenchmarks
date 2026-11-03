@@ -93,7 +93,7 @@ spec:
           cd /tmp/tpums_repo
 
           echo "=== Installing Package Dependencies ==="
-          pip install --upgrade -e .
+          pip install --upgrade -e ".[tpu]"
 
           mkdir -p /tmp/results /tmp/tensorboard
 

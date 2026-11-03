@@ -149,7 +149,7 @@ spec:
                       export PATH="/tmp/.local/bin:$PATH"
                       uv venv /tmp/venv
                       source /tmp/venv/bin/activate
-                      uv pip install .
+                      uv pip install ".[tpu]"
 
                       echo "=== Executing Benchmark: ${CONFIG_PATH} ==="
                       rm -rf /tmp/tensorboard

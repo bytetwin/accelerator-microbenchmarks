@@ -83,12 +83,12 @@ Get up and running on your accelerator environment in seconds.
 <a id="1-installation"></a>
 ### 1. Installation
 
-Clone the repository and install in editable mode within your Python environment:
+Clone the repository and install in editable mode, with the TPU backend, within your Python environment:
 
 ```bash
 git clone https://github.com/AI-Hypercomputer/accelerator-microbenchmarks.git
 cd accelerator-microbenchmarks
-pip install -e .
+pip install -e ".[tpu]"
 ```
 
 <a id="2-inspect-accelerator-hardware--environment"></a>
